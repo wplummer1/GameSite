@@ -1,0 +1,23 @@
+﻿@model GameSite.Models.Products
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<br />
+@using (Html.BeginForm("results", "Search"))
+{
+    @Html.AntiForgeryToken()
+    <div class="Search">
+        <label>SEARCHBOX:</label>
+        <input type="text" name="SearchValue" id="SearchValue" />
+    </div>
+    <div>
+        @Html.DropDownList("source");
+    </div>
+    <div class="col-md-offset-2 col-md-10">
+        <input type="Submit" value="Search" class="btn btn-default" />
+    </div>
+}
