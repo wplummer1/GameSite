@@ -79,4 +79,5 @@
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
     @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Add to Cart", "AddToCart", "shoppingCarts", new { gameName = Model.Name }, null)
 </p>
