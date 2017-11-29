@@ -24,5 +24,7 @@ namespace GameSite.Models
         public System.Data.Entity.DbSet<GameSite.Models.Customer> Customers { get; set; }
 
         public System.Data.Entity.DbSet<GameSite.Models.shoppingCart> shoppingCarts { get; set; }
+
+        public System.Data.Entity.DbSet<GameSite.Models.Payment> Payments { get; set; }
     }
 }

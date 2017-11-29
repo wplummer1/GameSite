@@ -1,4 +1,4 @@
-﻿@model IEnumerable<GameSite.Models.shoppingCart>
+﻿@model IEnumerable<GameSite.Models.Payment>
 
 @{
     ViewBag.Title = "Index";
@@ -12,16 +12,16 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.UName)
+            @Html.DisplayNameFor(model => model.CardType)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Pname)
+            @Html.DisplayNameFor(model => model.CardHolder)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.quantity)
+            @Html.DisplayNameFor(model => model.ExpDate)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.addedDate)
+            @Html.DisplayNameFor(model => model.CCV)
         </th>
         <th></th>
     </tr>
@@ -29,16 +29,16 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.UName)
+            @Html.DisplayFor(modelItem => item.CardType)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Pname)
+            @Html.DisplayFor(modelItem => item.CardHolder)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.quantity)
+            @Html.DisplayFor(modelItem => item.ExpDate)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.addedDate)
+            @Html.DisplayFor(modelItem => item.CCV)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
@@ -49,6 +49,3 @@
 }
 
 </table>
-<p>
-    @Html.ActionLink("Complete Payment", "Index", "Payments")
-</p>
